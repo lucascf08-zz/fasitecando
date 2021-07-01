@@ -25,7 +25,7 @@ class Userlist extends React.Component {
   }
 
   render() {
-    if (this.props.secaoAtiva == "userlist"){
+    if (this.props.menuAtivo){
       return (
         <ReactCSSTransitionGroup transitionName = "example"
                transitionAppear = {true} transitionAppearTimeout = {500}

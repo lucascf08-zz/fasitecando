@@ -11,13 +11,20 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      secaoAtiva: ""
+      secaoAtiva: "",
+      menuAtivo: false
     };  
   }
 
   handleLoginClick(e) {
     this.setState(() => ({
       secaoAtiva : e
+    }));
+  }
+
+  handleMouseOver() {
+    this.setState(() => ({
+     menuAtivo : !this.state.menuAtivo
     }));
   }
   render(){
@@ -41,8 +48,8 @@ class App extends React.Component {
             Registrar
           </a>
           <ul className="pure-menu-list list"
-              onMouseEnter= {() => this.handleLoginClick("userlist")}
-              onMouseLeave= {() => this.handleLoginClick("")}>
+              onMouseEnter= {() => this.handleMouseOver()}
+              onMouseLeave= {() => this.handleMouseOver()}>
             <li className="pure-menu-item item"> 
               <a
               className="pure-menu-link link"
@@ -53,7 +60,7 @@ class App extends React.Component {
               </a>
 
             </li>
-            <Userlist secaoAtiva={this.state.secaoAtiva}/>
+            <Userlist menuAtivo={this.state.menuAtivo}/>
   
           </ul>
          
