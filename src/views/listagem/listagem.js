@@ -37,7 +37,7 @@ class Listagem extends Component {
                 <div className="pure-g">
                     <div className="pure-u-1">
                         {this.state.people.map(({id, first_name, last_name, avatar}) => (
-                            <div className="pure-u-1-3 div-img" key={id}>
+                            <div className="pure-u-1-2 div-img" key={id}>
                                 {first_name} {last_name} 
                                 <br></br>
                                 <img 

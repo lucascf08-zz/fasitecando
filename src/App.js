@@ -47,7 +47,7 @@ class App extends React.Component {
             className="pure-menu-link botao"
             onClick= {() => this.handleLoginClick("registro")}
           >
-            Registrar
+            Cadastro
           </a>
           
           <ul className="pure-menu-list list"
@@ -80,7 +80,7 @@ class App extends React.Component {
     </div>
       
     <div className="pure-u-1 div-header">
-      fasitecando por Lucas C. Ferreira
+      fasitecando por lucas c. ferreira
     </div> 
   </div>
   );

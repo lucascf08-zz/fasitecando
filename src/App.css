@@ -1,5 +1,5 @@
-body {
-  font-family: monospace;
+body, body * {
+  font-family: monospace !important;
 }
 
 .App {
@@ -45,8 +45,6 @@ body {
 
 }
 
-
-
 .div-header {
   background-color: #282c34;
   height: 5vh;
@@ -61,6 +59,7 @@ body {
 
 .menu-bar {
   background-color: #282c34;
+  font-size: 1.5em;
   height: 5vh;
   width: 100%;
   display: flex;
@@ -78,7 +77,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .input{
@@ -149,9 +148,17 @@ body {
   font-size: .7em;
 }
 
-@media (max-width: 30em){
+@media (max-width: 48em){
 	.botao, .menu-bar{
 		height: 5vh;
 	}
-	
+	.div-header, .menu-bar{
+    font-size: 1em;
+  }
+
+  .div-central{
+    font-size: 1.5em;
+  }
+
+
 }
