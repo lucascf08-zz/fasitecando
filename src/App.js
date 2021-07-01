@@ -3,6 +3,8 @@ import reactDom from 'react-dom';
 
 import Login from './views/login/login.js';
 import Registro from './views/registro/registro.js';
+import Listagem from './views/listagem/listagem.js';
+import ListaUm from './views/listaUm/listaUm.js';
 
 import Userlist from './views/userlist/userlist.js';
 import './App.css';
@@ -11,12 +13,12 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      secaoAtiva: "",
+      secaoAtiva: "login",
       menuAtivo: false
     };  
   }
 
-  handleLoginClick(e) {
+  handleLoginClick = (e) => {
     this.setState(() => ({
       secaoAtiva : e
     }));
@@ -47,20 +49,21 @@ class App extends React.Component {
           >
             Registrar
           </a>
+          
           <ul className="pure-menu-list list"
-              onMouseEnter= {() => this.handleMouseOver()}
-              onMouseLeave= {() => this.handleMouseOver()}>
+            onMouseEnter= {() => this.handleMouseOver()}
+            onMouseLeave= {() => this.handleMouseOver()}>
+            
             <li className="pure-menu-item item"> 
-              <a
-              className="pure-menu-link link"
-              
-              
-              >
-              Usuarios
+              <a className="pure-menu-link link">
+                Usuários
               </a>
 
             </li>
-            <Userlist menuAtivo={this.state.menuAtivo}/>
+            <Userlist 
+              menuAtivo={this.state.menuAtivo}
+              handleLoginClick={this.handleLoginClick}
+            />
   
           </ul>
          
@@ -72,6 +75,8 @@ class App extends React.Component {
     <div className="pure-u-1 div-central">
       <Login secaoAtiva={this.state.secaoAtiva} />
       <Registro secaoAtiva={this.state.secaoAtiva} />
+      <Listagem secaoAtiva={this.state.secaoAtiva} />
+      <ListaUm secaoAtiva={this.state.secaoAtiva} />
     </div>
       
     <div className="pure-u-1 div-header">

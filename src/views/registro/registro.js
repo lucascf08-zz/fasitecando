@@ -45,7 +45,7 @@ class Registro extends React.Component {
     )
     .catch((error) => {
       console.log(error);
-      alert("Dados inv·lidos. Tente novamente");
+      alert("Dados inv√°lidos. Tente novamente");
     });
     
     event.preventDefault();

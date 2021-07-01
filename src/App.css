@@ -6,6 +6,13 @@ body {
   text-align: center;
 }
 
+.avatar{
+  border-radius: 50%;
+  padding-top:1em;
+}
+.div-img{
+  padding-top: 1em;
+}
 .botao {
   height: 5vh;
   text-align: center;
@@ -113,6 +120,33 @@ body {
 .example-leave.example-leave-active {
   opacity: 1;
   transition: opacity 1s ease-out;
+}
+
+.div-botoes{
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: .7em;
+}
+
+.div-botoes > a {
+
+  width: 50%;
+} 
+
+
+.form-atualizar{
+  padding-top:2em;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: .7em;
 }
 
 @media (max-width: 30em){

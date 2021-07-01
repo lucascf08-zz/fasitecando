@@ -33,36 +33,18 @@ class Userlist extends React.Component {
           <li className="pure-menu-item item">
             <a
               className="pure-menu-link link"
-              onClick= {() => this.handleLoginClick("listar")}
+              onClick= {() => this.props.handleLoginClick("listar")}
             >
-              Listar
+              Listar todos
             </a>
           </li>
 
           <li className="pure-menu-item item">
             <a
               className="pure-menu-link link"
-              onClick= {() => this.handleLoginClick("atualizar")}
+              onClick= {() => this.props.handleLoginClick("listarUm")}
             >
-              Atualizar
-            </a>
-          </li>
-
-          <li className="pure-menu-item item">
-            <a
-              className="pure-menu-link link"
-              onClick= {() => this.handleLoginClick("excluir")}
-            >
-              Excluir
-            </a>
-          </li>
-          
-          <li className="pure-menu-item item">
-            <a
-              className="pure-menu-link link"
-              onClick= {() => this.handleLoginClick("single")}
-            >
-              Um Usuario
+              Listar um
             </a>
           </li>
 

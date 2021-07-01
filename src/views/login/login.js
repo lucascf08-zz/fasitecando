@@ -45,7 +45,7 @@ class Login extends React.Component {
     )
     .catch((error) => {
       console.log(error);
-      alert("Credenciais inválidas. Tente novamente");
+      alert("Credenciais invÃ¡lidas. Tente novamente");
     });
     
     event.preventDefault();
