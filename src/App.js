@@ -2,6 +2,9 @@ import React from 'react';
 import reactDom from 'react-dom';
 
 import Login from './views/login/login.js';
+import Registro from './views/registro/registro.js';
+
+import Userlist from './views/userlist/userlist.js';
 import './App.css';
 
 class App extends React.Component {
@@ -33,23 +36,35 @@ class App extends React.Component {
 
           <a
             className="pure-menu-link botao"
-            onClick= {() => this.handleLoginClick("users")}
-          >
-            Usuarios
-          </a>
-
-          <a
-            className="pure-menu-link botao"
-            onClick= {() => this.handleLoginClick("registrar")}
+            onClick= {() => this.handleLoginClick("registro")}
           >
             Registrar
           </a>
+          <ul className="pure-menu-list list"
+              onMouseEnter= {() => this.handleLoginClick("userlist")}
+              onMouseLeave= {() => this.handleLoginClick("")}>
+            <li className="pure-menu-item item"> 
+              <a
+              className="pure-menu-link link"
+              
+              
+              >
+              Usuarios
+              </a>
 
+            </li>
+            <Userlist secaoAtiva={this.state.secaoAtiva}/>
+  
+          </ul>
+         
+
+          
         </div>
     </div>
     
     <div className="pure-u-1 div-central">
       <Login secaoAtiva={this.state.secaoAtiva} />
+      <Registro secaoAtiva={this.state.secaoAtiva} />
     </div>
       
     <div className="pure-u-1 div-header">

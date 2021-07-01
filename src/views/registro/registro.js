@@ -4,7 +4,7 @@ import '../../../node_modules/purecss/build/pure.css'
 import axios from 'axios';
 
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
-class Login extends React.Component {
+class Registro extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -33,11 +33,11 @@ class Login extends React.Component {
       password: this.state.senha,
     };
 
-    axios.post('https://reqres.in/api/login', req).then(
+    axios.post('https://reqres.in/api/register', req).then(
       (response) => {
         
         if (response.status === 200) {
-            alert("Login foi efetuado com sucesso", response.message);
+            alert("Registro foi efetuado com sucesso", response.message);
  
         }
 
@@ -45,21 +45,21 @@ class Login extends React.Component {
     )
     .catch((error) => {
       console.log(error);
-      alert("Credenciais inválidas. Tente novamente");
+      alert("Dados inválidos. Tente novamente");
     });
     
     event.preventDefault();
   }
 
   render() {
-    if (this.props.secaoAtiva == "login"){
+    if (this.props.secaoAtiva == "registro"){
       return (
         <ReactCSSTransitionGroup transitionName = "example"
                transitionAppear = {true} transitionAppearTimeout = {500}
                transitionLeave = {true} transitionLeaveTimeout = {500}>
         <form className="pure-form pure-form-stacked form" onSubmit={this.handleSubmit}>
           <fieldset>
-            <legend>Login</legend>
+            <legend>Cadastro</legend>
   
             <input 
               type="email" 
@@ -84,7 +84,7 @@ class Login extends React.Component {
 
             />
     
-            <button type="submit" className="pure-button pure-button-primary input">Entrar</button>
+            <button type="submit" className="pure-button pure-button-primary input">Cadastrar</button>
           </fieldset>
         </form>
         </ReactCSSTransitionGroup>
@@ -95,4 +95,4 @@ class Login extends React.Component {
   }
 }
   
-  export default Login;
+  export default Registro;
